@@ -43,11 +43,11 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ roll.nome }} Roll</h5>
                         <p class="card-text">€ {{ roll.prezzo }}</p>
-                        <button id="incrementBtn" style="border-radius: 8px; background-color:orange;">+</button>
-                        <span id="counter">0</span>
+                        <button id="incrementBtn_{{ roll.id }}" style="border-radius: 8px; background-color:orange;">+</button>
+                        <span id="counter_{{ roll.id }}">0</span>
+                        <button id="decrementBtn_{{ roll.id }}" style="border-radius: 8px; background-color: lightsalmon;">-</button>
                         <a href="{% url 'ordina' %}" class="btn btn-primary">Acquista</a>
                     </div>
-                    <button id="decrementBtn" style="border-radius: 8px; background-color: lightsalmon;">-</button>
                 </div>
             </div>
             {% endfor %}
